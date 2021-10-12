@@ -1,5 +1,5 @@
 ## Dash Julia Applications
-Dash Julia is a framework created by Plotly, and allows you to create web analytics applications. You can find example applications in this repository. If you have any questions, feel free to ask me or <a href="https://community.plotly.com/c/dash/julia/20">Dash Julia Community Forum</a>. Enjoy!
+Dash Julia is a framework created by Plotly, and allows you to create web analytics applications. You can find example applications in this repository. If you have any questions, feel free to ask me or <a href="https://community.plotly.com/c/dash/julia/20">Dash Julia Community Forum</a>.
 
 ### Applications
 - <b>Tokyo Olmypic Medals — </b><a href="https://dash-tokyo-olympics.herokuapp.com">Live on Heroku</a>
