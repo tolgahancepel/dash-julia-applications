@@ -2,7 +2,9 @@
 Dash Julia is a framework created by Plotly, and allows you to create web analytics applications. You can find example applications in this repository. If you have any questions, feel free to ask me or <a href="https://community.plotly.com/c/dash/julia/20">Dash Julia Community Forum</a>. Enjoy!
 
 ### Applications
-- <a href="https://github.com/tolgahancepel/dash-julia-applications/tree/main/tokyo-olympic-medals"><b>Tokyo Olmypic Medals</b></a>
+- <b>Tokyo Olmypic Medals — </b><a href="https://dash-tokyo-olympics.herokuapp.com">Live on Heroku</a>
+
+P.S. If you see an error, please try refreshing the page. It's about Heroku's limited memory.
 
 ### Installation and Usage
 1. Install all dependencies listed in Project.toml - for example:
