@@ -1,1 +1,20 @@
-# dash-julia-applications
+## Dash Julia Applications
+Dash Julia is a framework created by Plotly, and allows you to create web analytics applications. You can find example applications in this repository. If you have any questions, feel free to ask me or <a href="https://community.plotly.com/c/dash/julia/20">Dash Julia Community Forum</a>. Enjoy!
+
+### Applications
+- <a href="https://github.com/tolgahancepel/dash-julia-applications/tree/main/tokyo-olympic-medals"><b>Tokyo Olmypic Medals</b></a>
+
+### Installation and Usage
+1. Install all dependencies listed in Project.toml - for example:
+```
+using Pkg
+Pkg.add("Dash")
+```
+2. Run app.jl to launch a local Dash server to host the app. Visit http://127.0.0.1:8050/ to see the application (use the following code in a command line).
+```
+/path/to/julia app.jl
+```
+or, if you added julia to PATH:
+```
+julia app.jl
+```
