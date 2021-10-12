@@ -1,0 +1,29 @@
+body {
+    background-color: #f4f2e4;
+}
+
+.container {
+    margin-top: 4rem;
+}
+
+.row{
+    padding-bottom: 10rem;
+}
+
+.card {
+    border-radius: 15rem;
+}
+
+.main-svg {
+    border-radius: 4px;
+}
+
+.tokyo-div {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.tokyo-image {
+    width: auto;
+    height: 18rem;
+}
