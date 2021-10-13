@@ -1,0 +1,6 @@
+[deps]
+Dash = "1b08a953-4be3-4667-9a23-3db579824955"
+DashBootstrapComponents = "1b08a953-4be3-4667-9a23-fa6d05876a1e"
+DashCoreComponents = "1b08a953-4be3-4667-9a23-9da06441d987"
+DashHtmlComponents = "1b08a953-4be3-4667-9a23-24100242a84a"
+PlotlyJS = "f0f68f2c-4968-5e81-91da-67840de0976a"
