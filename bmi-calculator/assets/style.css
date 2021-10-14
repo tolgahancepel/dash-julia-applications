@@ -8,25 +8,17 @@ body {
 
 .bmi-jumbotron {
     text-align: center;
-    background: linear-gradient(135deg, #4559b9 0%, #3d4465 100%);
+    background-color: rgba(69, 89, 185,0.8);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     color: white;
     font-weight: 900;
     border-radius: 20px;
     padding: 2.4rem;
 }
 
-.bmi-chart {
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-    border-radius: 20px;
-}
-
-.input-group {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-}
+/* 
+ * CARDS
+*/
 
 .card-header {
     background-color: #fff;
@@ -34,28 +26,51 @@ body {
     border-radius: 20px 20px 0px 0px !important;
 }
 
-.card-body {
-    background-color: #fbfbfd;
-}
-
 .card {
-    height: 16rem;
     border-radius: 20px;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
 }
 
 .card-body {
     border-radius: 0px 0px 20px 20px;
+    background-color: #fbfbfd;
 }
 
+.card-tiny {
+    height: 16rem;
+}
+
+
+.card-bmi-info{
+    text-align: center;
+    padding-top: 4rem;
+    border-radius: 20px !important;
+    background-color: #fff;
+}
 
 .cardbody-bmi-calculation {
     text-align: end;
 }
 
-.card-bmi-info{
+.cardbody-bmi-chart {
     text-align: center;
-    padding-top: 4rem;
+}
+
+.input-group {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* 
+ * COMPONENTS
+*/
+
+.bmi-chart {
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    border-radius: 20px;
 }
 
 .btn-info {
@@ -66,4 +81,13 @@ body {
 .btn-info:hover {
     background-color: #3d4465;
     border-color: #3d4465;
+}
+
+.img-labels{
+    width: 34rem;
+    height: auto;
+}
+
+.js-plotly-plot .plotly .cursor-crosshair {
+    cursor: context-menu !important;
 }
