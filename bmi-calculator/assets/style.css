@@ -91,3 +91,7 @@ body {
 .js-plotly-plot .plotly .cursor-crosshair {
     cursor: context-menu !important;
 }
+
+.legendtext {
+    font-weight: 600;
+}
