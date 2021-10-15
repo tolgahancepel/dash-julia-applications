@@ -1,0 +1,95 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+body {
+    background-color: #f2f5fa;
+    font-family: "Inter", sans-serif;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 16rem;   
+    padding: 2rem 1rem;
+    background-color: #576aca;
+}
+
+.page-content {
+    margin-left: 18rem;
+    margin-right: 2rem;
+    padding: 2rem 1rem;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    background-color: #6073d6;
+}
+
+.nav-link {
+    color: rgba(255,255,255,0.8);
+}
+
+
+/* 
+ * TODO: adjust only for sidebar
+*/
+a:hover {
+    color: white;
+}
+
+/*
+ * CARDS 
+ */
+
+ .card-header {
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px 20px 0px 0px !important;
+    border-bottom: none;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.05) 0px 2px 8px 0px;
+}
+
+.card-body {
+    border-radius: 0px 0px 10px 10px;
+    background-color: #fff;
+}
+
+.btn-info {
+    background-color: #576aca;
+    border-color: #576aca;
+}
+
+.btn-info:hover {
+    background-color: #404a7e;
+    border-color: #404a7e;;
+}
+
+.btn-info:not(:disabled):not(.disabled):active, .btn-info:not(:disabled):not(.disabled).active, .show > .btn-info.dropdown-toggle {
+    background-color: #404a7e;
+    border-color: #404a7e;;
+}
+
+.btn-info:focus, .btn-info.focus {
+    background-color: #404a7e;
+    border-color: #404a7e;;
+}
+
+.row {
+    padding-bottom: 2rem;
+}
+
+h4 {
+    color: #414c69;
+}
+
+.form-element {
+    margin-bottom: 12px;
+}
