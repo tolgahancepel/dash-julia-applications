@@ -19,6 +19,21 @@ body {
     background-color: #576aca;
 }
 
+.logo-div {
+    text-align: center;
+}
+
+.logo {
+    width: 12rem;
+    height: auto;
+}
+
+
+
+.sidebar .pes2021-logo {
+    text-align: center;
+}
+
 .page-content {
     margin-left: 18rem;
     margin-right: 2rem;
@@ -37,7 +52,7 @@ body {
 /* 
  * TODO: adjust only for sidebar
 */
-a:hover {
+ul a:hover {
     color: white;
 }
 
@@ -62,6 +77,9 @@ a:hover {
     background-color: #fff;
 }
 
+.cardbody-about {
+    border-radius: 10px;
+}
 .btn-info {
     background-color: #576aca;
     border-color: #576aca;

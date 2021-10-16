@@ -9,20 +9,24 @@ using Dash, DashHtmlComponents, DashCoreComponents, DashBootstrapComponents
 
 app = dash(external_stylesheets=["assets/style.css", dbc_themes.UNITED])
 
-
 df = DataFrame(CSV.File("data/pes2021.csv"))
 
 players = select(df, :Player_Name)
 
+n_clicks_count=0
+
+# -----------------------------------------------------------------------------
+# Sidebar
+# -----------------------------------------------------------------------------
 sidebar = html_div(
     [
-        html_h5("PES2021 Players"),
+        html_div(html_img(src="assets/pes2021-logo.png", className="logo"), className="logo-div"),
         html_hr(),
 
         dbc_nav(
             [
                 dbc_navlink("Graphic", href="/", active="exact"),
-                dbc_navlink("About", href="/page-1", active="exact")
+                dbc_navlink("About", href="/about", active="exact")
             ],
             vertical=true,
             pills=true,
@@ -31,6 +35,9 @@ sidebar = html_div(
     className="sidebar"
 )
 
+# -----------------------------------------------------------------------------
+# Page - Graphic
+# -----------------------------------------------------------------------------
 page_graphic = html_div(
     [
         dbc_row(dbc_col(html_h4("Graphic"), lg=12)),
@@ -53,7 +60,7 @@ page_graphic = html_div(
                                     ),
 
                                     dbc_button(id="btn-update", "Update Filters", color="info", className="mr-1"),
-                                    dbc_button("Reset", outline=true, color="danger", className="mr-1")
+                                    # dbc_button(id="btn-reset", "Reset", outline=true, color="danger", className="mr-1")
                                 ]
                             )
                         ]
@@ -77,33 +84,68 @@ page_graphic = html_div(
     ]
 )
 
+# -----------------------------------------------------------------------------
+# Page - About
+# -----------------------------------------------------------------------------
 
+about_text= """PES2021 Dashboard is a Dash Julia application that allows you
+                to compare football players on radar chart. The players data
+                scraped from pesdb.net, and only top 32 players included because
+                the Heroku's memory limitations."""
+
+
+page_about = html_div(
+    [
+        dbc_row(
+            dbc_col(html_h4("About"), lg=12)
+        ),
+        dbc_row(
+            dbc_col(
+                dbc_card(
+                    dbc_cardbody(
+                        [
+                            html_p(about_text),
+                            html_h5("Source Code"),
+                            html_a(
+                                "https://github.com/tolgahancepel/dash-julia-applications/tree/main/pes2021-players",
+                                href="https://github.com/tolgahancepel/dash-julia-applications/tree/main/pes2021-players"
+                            ),
+                            html_h5("Dataset"),
+                            html_a(
+                                "https://pesdb.net/pes2021/",
+                                href="https://pesdb.net/pes2021/"
+                            ),
+                        ], className="cardbody-about"
+                    )
+                )
+            )
+        )
+    ]
+)
+
+# -----------------------------------------------------------------------------
+# Content
+# -----------------------------------------------------------------------------
 content = html_div(id="page-content", className="page-content")
 
 app.layout = html_div([dcc_location(id="url"), sidebar, content])
 
+# -----------------------------------------------------------------------------
+# Callbacks
+# -----------------------------------------------------------------------------
 
-
-
+# Radar Chart Update Callback
 callback!(
     app,
     Output("radar-graph", "figure"),
-    [Input("dropdown-players", "value"),
-     Input("btn-update", "n_clicks")]
-) do players, n_clicks
-
-    # Check
-    
-    df_wind = dataset(DataFrame, "wind")
-
-    categories = ["Acceleration","Balance","Ball Control", "Curl", "Dribbling", 
-    "Finishing", "Heading", "Jump", "Kicking Power", "Lofted Pass",
-    "Low Pass" ,"Offensive Awareness" ,"Physical Contact",
-    "Place Kicking", "Speed", "Tight Possession"]
-    
-    traces = []
+    Input("btn-update", "n_clicks"),
+    State("dropdown-players", "value")
+) do n_clicks, players
 
     if players !== nothing
+
+        traces = []
+
         for plyr in players
             sing_row = filter(row -> row.Player_Name == string(plyr), df)
             sing_row = select!(sing_row, Not(:Player_Name))
@@ -120,31 +162,41 @@ callback!(
                 )
             )
         end
-    end
-    
 
-
-    if n_clicks===nothing
-        return no_update
-    else
-        return plot(
+        fig = plot(
             [trace for trace in traces],
             Layout(
+                showlegend=true,
                 polar=attr(
                     radialaxis=attr(
                         range=[0,100],
                         visible=true
                     )
                 ),
-                showlegend=true
+                legend=attr(
+                    orientation="h",
+                    yanchor="bottom",
+                    y=-0.5,
+                    x=0.18,
+                    font=attr(
+                        size=14,
+                        color="#3d4465"
+                    ),
+                ),
             )
         )
     end
+    
+    if n_clicks !== nothing && n_clicks > n_clicks_count
+        global n_clicks_count = n_clicks_count+1
+        return fig
+    else
+        return no_update
+    end
+    
 end
 
-
-
-
+# Path Routing Callback
 callback!(
     app,
     Output("page-content", "children"),
@@ -152,15 +204,11 @@ callback!(
 ) do pathname
     if pathname == "/"
         return page_graphic
-    elseif pathname == "/page-1"
-        return html_p("This is page-1")
-    elseif pathname == "/page-2"
-        return html_p("This is page-2")
+    elseif pathname == "/about"
+        return page_about
     else
         return html_p("404")
     end
 end
-
-
 
 run_server(app, "0.0.0.0", debug=false)
