@@ -3,11 +3,11 @@ Dash Julia is a framework created by Plotly, and allows you to create web analyt
 
 ### Applications
 - <b>Tokyo Olympic Medals — </b><a href="https://dash-tokyo-olympics.herokuapp.com">Live on Heroku</a> <br>
-<img src="https://raw.githubusercontent.com/tolgahancepel/dash-julia-applications/main/img/tokyo-olympics.gif" width=400></img><br><br>
+<img src="https://raw.githubusercontent.com/tolgahancepel/dash-julia-applications/main/img/tokyo-olympics.gif" width=800></img><br><br>
 - <b>Body Mass Index (BMI) Calculator — </b><a href="https://dash-bmi-calculator.herokuapp.com/">Live on Heroku</a> <br>
-<img src="https://raw.githubusercontent.com/tolgahancepel/dash-julia-applications/main/img/bmi-calculator.gif" width=400></img><br><br>
+<img src="https://raw.githubusercontent.com/tolgahancepel/dash-julia-applications/main/img/bmi-calculator.gif" width=800></img><br><br>
 - <b>PES2021 Players — </b><a href="https://dash-pes2021.herokuapp.com/">Live on Heroku</a> <br>
-<img src="https://raw.githubusercontent.com/tolgahancepel/dash-julia-applications/main/img/pes2021-players.gif" width=400></img>
+<img src="https://raw.githubusercontent.com/tolgahancepel/dash-julia-applications/main/img/pes2021-players.gif" width=800></img>
 
 P.S. If you see an error, please try refreshing the page. It's about Heroku's limited memory.
 
