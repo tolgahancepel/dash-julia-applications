@@ -2,7 +2,7 @@
 Dash Julia is a framework created by Plotly, and allows you to create web analytics applications. You can find example applications in this repository. If you have any questions, feel free to ask me or <a href="https://community.plotly.com/c/dash/julia/20">Dash Julia Community Forum</a>.
 
 ### Applications
-- <b>Tokyo Olympic Medals — </b><a href="https://dash-tokyo-olympics.herokuapp.com">Live on Heroku</a> <br>
+- <b>Tokyo Olympic Medals — </b><a href="https://dash-tokyo-olympics.herokuapp.com" target="_blank">Live on Heroku</a> <br>
 <img src="https://raw.githubusercontent.com/tolgahancepel/dash-julia-applications/main/img/tokyo-olympics.gif" width=800></img><br><br>
 - <b>Body Mass Index (BMI) Calculator — </b><a href="https://dash-bmi-calculator.herokuapp.com/">Live on Heroku</a> <br>
 <img src="https://raw.githubusercontent.com/tolgahancepel/dash-julia-applications/main/img/bmi-calculator.gif" width=800></img><br><br>
