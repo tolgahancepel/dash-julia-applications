@@ -102,7 +102,7 @@ end
 
 card_dropdown = dbc_card(
     [
-        dbc_cardheader("Activation Function"),
+        dbc_cardheader("Activation Functions"),
         dbc_cardbody(
             [
                 dcc_dropdown(
@@ -124,8 +124,8 @@ card_dropdown = dbc_card(
                 dcc_radioitems(
                     id="radio-ranges",
                     options=[
-                        (label="[-1 to +1]", value="one"),
-                        (label="[-10 to +10]", value="ten")
+                        (label="[-1 to 1]", value="one"),
+                        (label="[-10 to 10]", value="ten")
                     ],
                     value="one"
                 )
