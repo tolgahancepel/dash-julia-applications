@@ -1,0 +1,44 @@
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+body {
+    background-color: #F9F9F9;
+    font-family: "Inter", sans-serif;
+}
+
+nav h3 {
+    color: #3f4f75;
+}
+.navbar-header {
+    margin-bottom: 0;
+    margin-left: 2rem;
+}
+
+.navbar img {
+    margin-left: 1rem;
+}
+
+.container {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    margin-bottom: 1.6rem;
+}
+
+.card-header {
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+.cardbody-info {
+    text-align: center;
+}
+
+input {
+    margin-bottom: 6px;
+}
