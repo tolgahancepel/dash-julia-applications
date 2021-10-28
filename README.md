@@ -4,13 +4,18 @@ Dash Julia is a framework created by Plotly, and allows you to create web analyt
 ### Applications
 - <b>Tokyo Olympic Medals — </b><a href="https://dash-tokyo-olympics.herokuapp.com">Live on Heroku</a> <br>
 <img src="https://raw.githubusercontent.com/tolgahancepel/dash-julia-applications/main/img/tokyo-olympics.gif" width=800></img><br><br>
+
 - <b>Body Mass Index (BMI) Calculator — </b><a href="https://dash-bmi-calculator.herokuapp.com/">Live on Heroku</a> <br>
 <img src="https://raw.githubusercontent.com/tolgahancepel/dash-julia-applications/main/img/bmi-calculator.gif" width=800></img><br><br>
+
 - <b>PES2021 Players — </b><a href="https://dash-pes2021.herokuapp.com/">Live on Heroku</a> <br>
 <img src="https://raw.githubusercontent.com/tolgahancepel/dash-julia-applications/main/img/pes2021-players.gif" width=800></img><br><br>
+
 - <b>Activation Functions in Neural Networks — </b><a href="https://dash-activation-functions.herokuapp.com/">Live on Heroku</a> <br>
 <img src="https://raw.githubusercontent.com/tolgahancepel/dash-julia-applications/main/img/activation-functions.gif" width=800></img>
 
+- <b>Object Detection with YOLOv3 — (Couldn't deploy on Heroku because memory/storage limits)</b>
+<img src="https://raw.githubusercontent.com/tolgahancepel/dash-julia-applications/main/img/objectdetector-yolo.gif" width=800></img><br><br>
 P.S. If you see an error, please try refreshing the page. It's about Heroku's limited memory.
 
 ### Installation and Usage
